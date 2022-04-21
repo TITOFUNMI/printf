@@ -39,6 +39,8 @@ int _printf(const char *format, ...)
 					char_printed += _putchar(format[i]);
 			else if (format[i] == 'd' || format[i] == 'i')
 				char_printed += print_num(va_arg(args, int));
+			else if (format[i] == 'b')
+				char_printed += print_binary((unsigned int)va_arg(args, int));
 		}
 		i++;
 	}
