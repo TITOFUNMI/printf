@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 					char_printed += print_string(va_arg(args, char *));
 			}
 			else if (format[i] == '%')
-					char_printed += _putchar(format[i]);
+					char_printed += print_percentage(print_percentage(va_arg(args, int)));
 			else if (format[i] == 'd' || format[i] == 'i')
 				char_printed += print_num(va_arg(args, int));
 			else if (format[i] == 'b')
