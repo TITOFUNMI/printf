@@ -17,5 +17,8 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    _printf("I can tell that %c is a character and %s is a string\n", 'p', "hello");
+    _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+    _printf("%%\n");
     return (0);
 }
