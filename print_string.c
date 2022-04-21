@@ -1,6 +1,9 @@
 #include "main.h"
 
 /**
+ * print_string - prints a string to stdout
+ * @str: string to be printed
+ * Return: no. of characters printed on success, or 0 on failure
  */
 
 int print_string(char *str)
@@ -9,13 +12,10 @@ int print_string(char *str)
 
 	if (str == (char *)0)
 		return (print_string("(null)"));
-	else
-	{
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
 
-		}
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
 	}
 	return (i);
 }
