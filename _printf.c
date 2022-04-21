@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 					char_printed += _putchar(format[i]);
 			else if (format[i] == 'd' || format[i] == 'i')
-				chars_printed += print_num(va_arg(args, int));
+				char_printed += print_num(va_arg(args, int));
 		}
 		i++;
 	}

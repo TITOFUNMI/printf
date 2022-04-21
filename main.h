@@ -4,5 +4,6 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_string(char *str);
+int print_num(long int n);
 
 #endif
