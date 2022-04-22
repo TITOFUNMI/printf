@@ -36,6 +36,10 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'o' || format[i] == 'u' ||
 			format[i] == 'x' || format[i] == 'X')
 				char_printed += print_odh(format[i], (unsigned int)va_arg(args, int));
+			else if (format[i] == 'S')
+				char_printed += print_S(va_arg(args, char *));
+			else if (format[i] == 'p')
+				char_printed += print_pointer(va_arg(args, void *));
 		}
 		i++;
 	}
