@@ -13,7 +13,7 @@ int print_string(char *str)
 	if (str == (char *)0)
 		return (print_string("(null)"));
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str && str[i]; i++)
 	{
 		_putchar(str[i]);
 	}
