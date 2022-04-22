@@ -8,14 +8,14 @@
 
 int print_string(char *str)
 {
-	int i;
+	int i = 0;
 
 	if (str == (char *)0)
 		return (print_string("(null)"));
-
-	for (i = 0; str && str[i]; i++)
+	while (str && str[i])
 	{
 		_putchar(str[i]);
+		i++;
 	}
 	return (i);
 }
