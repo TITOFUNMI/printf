@@ -34,8 +34,14 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'b')
 				char_printed += print_binary((unsigned int)va_arg(args, int));
 			else if (format[i] == 'o' || format[i] == 'u' ||
-			format[i] == 'x' || format[i] == 'X')
+format[i] == 'x' || format[i] == 'X')
 				char_printed += print_odh(format[i], (unsigned int)va_arg(args, int));
+			else if (format[i] == 'r')
+				char_printed += print_reverse(va_arg(args, char *));
+			else if (format[i] == 'R')
+				char_printed += print_rot13(va_arg(args, char *));
+			else
+				char_printed += print_unknown_specifier(format[i]);
 		}
 		i++;
 	}
