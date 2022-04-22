@@ -7,7 +7,7 @@ int print_string(char *str);
 int print_num(long int n);
 int print_binary(unsigned int num);
 int print_unknown_specifier(char c);
-int print_percentage();
+int print_percentage(void);
 int print_odh(char c, unsigned int num);
 int dec_to_oct(unsigned int num);
 int dec_to_hex(char c, unsigned int num);
