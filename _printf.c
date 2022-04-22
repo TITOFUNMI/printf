@@ -35,12 +35,13 @@ int _printf(const char *format, ...)
 				else
 					char_printed += print_string(va_arg(args, char *));
 			}
-			else if (format[i] == '%')
-					char_printed += print_percentage(print_percentage(va_arg(args, int)));
 			else if (format[i] == 'd' || format[i] == 'i')
 				char_printed += print_num(va_arg(args, int));
 			else if (format[i] == 'b')
 				char_printed += print_binary((unsigned int)va_arg(args, int));
+			else if (format[i] == 'o' || format[i] == 'u' ||
+			format[i] == 'x' || format[i] == 'X')
+				char_printed += print_odh(format[i], (unsigned int)va_arg(args, int));
 		}
 		i++;
 	}
