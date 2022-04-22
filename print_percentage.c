@@ -3,7 +3,7 @@
 /**
  */
 
-int print_percentage()
+int print_percentage(void)
 {
 	_putchar('%');
 	return (1);

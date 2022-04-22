@@ -42,6 +42,10 @@ format[i] == 'x' || format[i] == 'X')
 				char_printed += print_rot13(va_arg(args, char *));
 			else
 				char_printed += print_unknown_specifier(format[i]);
+			else if (format[i] == 'S')
+				char_printed += print_S(va_arg(args, char *));
+			else if (format[i] == 'p')
+				char_printed += print_pointer(va_arg(args, void *));
 		}
 		i++;
 	}
